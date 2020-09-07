@@ -10,14 +10,20 @@ const App = () => {
 
     const [ RecipeVideos, setRecipeVideos ] = useState([]);
 
+    const [activeRecipe, setActiveRecipe] = useState(-1);
+
+
+    
 
     useEffect(() => {
         alanBtn({
             key: alanKey,
-            onCommand: ({ command, videos }) => {
+            onCommand: ({ command, videos, number }) => {
                 if(command === 'newRecipes') {
                     setRecipeVideos(videos);
-                    // console.log(videos);
+                    setActiveRecipe(-1);
+                } else if(command === 'highlight') {
+                    setActiveRecipe((prevActiveCard) => prevActiveCard + 1);
                 }
             }
         })
@@ -29,7 +35,7 @@ const App = () => {
                 <img src={require('./assets/alan-ai-food-app-logo.gif')} className="alanLogo" alt="alan logo"/>
             </div>
             {/* <h1>Alan AI Food Video Application</h1> */}
-            <RecipesCards recipes={RecipeVideos} />
+            <RecipesCards recipes={RecipeVideos} activeRecipe={activeRecipe} />
         </div>
     )
 }

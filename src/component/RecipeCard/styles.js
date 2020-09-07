@@ -19,10 +19,11 @@ export default makeStyles({
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-between',
-        borderBottom: '10px solid white',
+        // borderBottom: '10px solid white',
     },
     activeCard: {
-        borderBottom: '10px solid #F34213',
+        // borderBottom: '10px solid #8E44AD',
+        backgroundColor: '#48C9B0',
     },
     title: {
         padding: '10px 16px',
