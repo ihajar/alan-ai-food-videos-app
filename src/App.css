@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+* {
+    margin: 0;
+}
+
+.app {
+    height: 100vh;
+}
+h1 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 40px;
+    font-weight: bolder;
+    margin: 40px 20px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.logoContainer {
+    display: flex;
+    margin: 0px 0px;
+    width: 100% ;
+    height: 400px;
+    align-items: center;
+    justify-content: center;
+}
+
+.alanLogo {
+    object-fit: contain;
+    align-items: center;
+}
+@media screen and (min-width: 835px) {
+    h1 {
+        font-size: 75px;
+    }
+    .logoContainer {
+        display: flex;
+        margin: 0px 0px;
+        width: 100% ;
+       justify-content: center;
+    }
+}
